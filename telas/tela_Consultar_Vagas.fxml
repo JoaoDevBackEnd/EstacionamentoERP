@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="861.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.FXConsultaVagas">
+   <children>
+      <AnchorPane layoutX="-9.0" layoutY="-6.0" prefHeight="567.0" prefWidth="876.0" style="-fx-background-color: #FFF;">
+         <children>
+            <Pane layoutX="82.0" layoutY="108.0" prefHeight="124.0" prefWidth="287.0" style="-fx-background-color: #26ed4e79;">
+               <children>
+                  <Text layoutX="38.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INFORME NUMERO VAGA" wrappingWidth="299.59649658203125">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txt_ConsultaCpf" layoutX="64.0" layoutY="49.0" prefHeight="26.0" prefWidth="176.0" />
+                  <Button fx:id="btn_Pesquisar" layoutX="88.0" layoutY="82.0" mnemonicParsing="false" onAction="#Btn_ClickPesquisar" prefHeight="36.0" prefWidth="128.0" style="-fx-background-color: #fff;" text="PESQUISAR" />
+               </children>
+            </Pane>
+            <ImageView fitHeight="246.0" fitWidth="364.0" layoutX="398.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@WhatsApp%20Image%202023-11-27%20at%2017.02.57%20(1).jpeg" />
+               </image>
+            </ImageView>
+            <Text layoutX="38.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONSULTAR VAGAS" wrappingWidth="391.7366943359375">
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Text>
+            <Button layoutX="739.0" layoutY="30.0" mnemonicParsing="false" onAction="#btn_ClickVoltar" prefHeight="42.0" prefWidth="109.0" style="-fx-background-color: #26ed4e79;" text="VOLTAR" />
+            <TableView fx:id="table_vagas" layoutX="27.0" layoutY="264.0" prefHeight="278.0" prefWidth="822.0">
+              <columns>
+                <TableColumn fx:id="colun_nome" prefWidth="188.0" text="Nome" />
+                  <TableColumn fx:id="colun_telefone" prefWidth="177.0" text="Telefone" />
+                <TableColumn fx:id="column_placa" minWidth="0.0" prefWidth="136.0" text="PLACA" />
+                  <TableColumn fx:id="column_tipo" prefWidth="46.0" text="TIPO" />
+                  <TableColumn fx:id="column_dataentrada" prefWidth="139.0" text="DATA ENTRADA" />
+                  <TableColumn fx:id="column_hora" prefWidth="134.0" text="HORA" />
+              </columns>
+            </TableView>
+            <Button layoutX="7.0" layoutY="542.0" mnemonicParsing="false" onAction="#btn_ClickVoltar" prefHeight="26.0" prefWidth="870.0" style="-fx-background-color: #26ed4e79;" />
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

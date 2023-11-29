@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Configurações de Conexão com o Banco de Dados MySQL -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/testehibernate</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">1234</property>
+
+        <!-- Dialeto do Banco de Dados MySQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Configurações adicionais -->
+        <!-- Por exemplo: Configuração de Pool de Conexões (opcional) -->
+        <!-- <property name="hibernate.connection.pool_size">1</property> -->
+
+        <!-- Mapeamento de Entidades -->
+        <mapping class="com.example.CadastroConveniado"/>
+        <mapping class="com.example.TicketsAtivos"/>
+        <mapping class="com.example.Admin"/>
+        <mapping class="com.example.NotaFiscal"/>
+        <!-- <mapping class="com.example.Entidade"/> -->
+    </session-factory>
+</hibernate-configuration>
